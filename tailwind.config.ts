@@ -23,6 +23,9 @@ const config: Config = {
           '600': '#222222',
           '700': '#373737',
         },
+        pink: {
+          DEFAULT: '#E876FF',
+        },
       },
       keyframes: {
         wiggle: {

@@ -4,16 +4,24 @@
 
 @layer base {
   h1 {
+    @apply text-[3rem] font-semibold;
+  }
+
+  h2 {
     @apply text-[2.5rem] font-medium;
   }
 }
 
 @layer components {
   .text-1 {
-
+    @apply text-lg font-normal;
   }
 
   .text-2 {
     @apply text-lg text-gray-500 font-normal;
+  }
+
+  .text-3 {
+    @apply text-lg font-medium;
   }
 }
