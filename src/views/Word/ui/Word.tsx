@@ -1,5 +1,6 @@
 import { ResponseProps } from '@/src/shared/types';
 import { Meaning } from '@/src/entities';
+import { PlayButton } from './PlayButton';
 
 interface WordProps {
   searchWord: string;
@@ -16,26 +17,33 @@ export const Word = async ({ searchWord }: WordProps) => {
   const [wordInformation] = response;
 
   const word = wordInformation.word;
-  const phonetic = wordInformation.phonetic;
-  const phonetics = wordInformation.phonetics;
   const meanings = wordInformation.meanings;
 
+  const phonetics = wordInformation.phonetics.find(({ audio }) => audio.length > 0);
+  const { text: phoneticText, audio: phoneticAudio } = phonetics
+    ? phonetics
+    : { text: '', audio: '' };
+
   return (
-    <div>
-      <div>
+    <div className="py-[3.75rem]">
+      <div className="mb-[2.5rem] flex items-center justify-between">
         <div>
           <h1>{word}</h1>
-          <p className="text-2">{phonetic}</p>
+          <p className="text-2 mt-4">{phoneticText}</p>
         </div>
+        <PlayButton src={phoneticAudio} />
       </div>
-      {meanings.map(({ partOfSpeech, definitions, synonyms }) => (
-        <Meaning
-          partOfSpeech={partOfSpeech}
-          definitions={definitions}
-          synonyms={synonyms}
-          key={partOfSpeech}
-        />
-      ))}
+
+      <div className="flex flex-col gap-y-[2rem]">
+        {meanings.map(({ partOfSpeech, definitions, synonyms }) => (
+          <Meaning
+            partOfSpeech={partOfSpeech}
+            definitions={definitions}
+            synonyms={synonyms}
+            key={partOfSpeech}
+          />
+        ))}
+      </div>
     </div>
   );
 };
