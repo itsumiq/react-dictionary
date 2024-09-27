@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 
-import { Play } from 'lucide-react';
+import { Play, Pause } from 'lucide-react';
 
 interface PlayButtonProps {
   src: string;
@@ -32,7 +32,11 @@ export const PlayButton = ({ src }: PlayButtonProps) => {
         className="flex size-[4.125rem] items-center justify-center rounded-full border border-pink"
         onClick={handleClick}
       >
-        <Play size="1.875rem" className="text-pink" />
+        {!playback ? (
+          <Pause size="1.875rem" className="text-pink" />
+        ) : (
+          <Play size="1.875rem" className="text-pink" />
+        )}
       </button>
     </>
   );
