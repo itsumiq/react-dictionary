@@ -4,7 +4,7 @@ export const Meaning = ({ partOfSpeech, definitions, synonyms }: MeaningsProps) 
   const synonym = synonyms.length === 0 ? 'no informations' : synonyms[0];
 
   return (
-    <div className="flex flex-col gap-y-[2rem]">
+    <div className="flex flex-col gap-y-[1.6rem]">
       <div className="flex items-center gap-6">
         <span className="text-3">{partOfSpeech}</span>
         <div className="h-px w-full bg-gray-600"></div>

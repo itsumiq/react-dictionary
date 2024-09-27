@@ -26,15 +26,15 @@ export const Word = async ({ searchWord }: WordProps) => {
 
   return (
     <div className="py-[3.75rem]">
-      <div className="mb-[2.5rem] flex items-center justify-between">
+      <div className="mb-[2.3rem] flex items-center justify-between">
         <div>
           <h1>{word}</h1>
-          <p className="text-2 mt-4">{phoneticText}</p>
+          <p className="text-2">{phoneticText}</p>
         </div>
         <PlayButton src={phoneticAudio} />
       </div>
 
-      <div className="flex flex-col gap-y-[2rem]">
+      <div className="flex flex-col gap-y-[1.6rem]">
         {meanings.map(({ partOfSpeech, definitions, synonyms }) => (
           <Meaning
             partOfSpeech={partOfSpeech}
