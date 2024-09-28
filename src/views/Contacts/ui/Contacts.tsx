@@ -1,10 +1,10 @@
-import { Email } from './Email';
+import { ButtonEmail } from './ButtonEmail';
 
 export const Contacts = () => {
   return (
     <ul className="flex flex-col items-center justify-center gap-2">
       <li>
-        <Email />
+        <ButtonEmail />
       </li>
       <li>
         <a

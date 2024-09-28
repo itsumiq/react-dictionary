@@ -5,14 +5,17 @@ export const Footer = () => {
     <ul className="border-t border-gray-600 py-[1.75rem]">
       <div className="m-[0_auto] flex w-[41.625rem] justify-between">
         <li>
-          <Link href="/contacts" className="text-2 transition hover:text-white">
+          <Link
+            href="/contacts"
+            className="text-2 transition hover:text-white max-sm:text-[1.2rem]"
+          >
             Contacts
           </Link>
         </li>
         <li>
           <a
             href="https://github.com/itsumiq/react-dictionary"
-            className="text-2 transition hover:text-white"
+            className="text-2 transition hover:text-white max-sm:text-[1.2rem]"
             target="_blank"
           >
             GitHub
