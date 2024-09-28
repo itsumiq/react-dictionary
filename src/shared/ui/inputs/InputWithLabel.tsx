@@ -5,7 +5,7 @@ export const InputWithLabel = () => {
     <div className="relative z-10">
       <input
         type="text"
-        className="h-[2.875rem] w-full rounded bg-black-700 pl-7 pr-11 text-lg caret-gray-700 outline-none"
+        className="h-[2.875rem] w-full rounded bg-black-700 pl-7 pr-11 text-lg caret-white outline-none"
         placeholder="Type text"
         name="searchWord"
       />

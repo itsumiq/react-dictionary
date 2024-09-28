@@ -36,6 +36,10 @@ const config: Config = {
       animation: {
         wiggle: 'wiggle 0.5s ease-out',
       },
+      screens: {
+        md: '769px',
+        sm: '651px',
+      },
     },
   },
   darkMode: 'selector',

@@ -15,7 +15,7 @@ export const Footer = () => {
             className="text-2 transition hover:text-white"
             target="_blank"
           >
-            Github
+            GitHub
           </a>
         </li>
       </div>

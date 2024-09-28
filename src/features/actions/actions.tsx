@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
-export const findWord = async (formData: FormData) => {
+export const getWord = async (formData: FormData) => {
   const { searchWord } = Object.fromEntries(formData);
 
   revalidatePath('/');

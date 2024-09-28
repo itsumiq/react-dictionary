@@ -18,7 +18,7 @@ export const Email = () => {
     <button
       onClick={handleClick}
       ref={buttonRef}
-      className="text-[3rem] text-gray-500 transition hover:text-white active:text-pink"
+      className="text-[2.5rem] text-gray-500 transition hover:text-white active:text-pink"
     >
       ITSUMIEXEWORK@GMAIL.COM
     </button>
