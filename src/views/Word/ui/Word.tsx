@@ -14,6 +14,15 @@ export const Word = async ({ searchWord }: WordProps) => {
     }
   );
   const response: ResponseProps[] = await request.json();
+
+  if (!request.ok) {
+    return (
+      <div className="flex flex-col items-center gap-1 text-white">
+        <span className="text-[2.5rem] font-medium">Word not found</span>
+        <span className="text-lg">Try again</span>
+      </div>
+    );
+  }
   const [wordInformation] = response;
 
   const word = wordInformation.word;
